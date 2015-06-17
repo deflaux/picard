@@ -67,14 +67,14 @@ import static htsjdk.variant.variantcontext.VariantContext.Type.*;
         programGroup = VcfOrBcf.class
 )
 public class GenotypeConcordance extends CommandLineProgram {
-    static final String USAGE_SUMMARY = "Calculates the concordance between genotype data for samples in two different VCFs, your callset and a standard or ‘truthset’.  Genotype concordance is calculated by dividing the number of variant genotypes in your call set that match the truthset by the total number of variants in your callset.  The concordance is broken into separate results sections for SNPs and indels.  Summary and detailed statistics are reported.  Note that for any pair of variants to compare, only the alleles for the samples under interrogation are considered and MNP, Symbolic, and Mixed classes of variants are not included.";
+    static final String USAGE_SUMMARY = "Calculates the concordance between genotype data for samples in two different VCFs, your callset and a standard or 'truthset'.  Genotype concordance is calculated by dividing the number of variant genotypes in your call set that match the truthset by the total number of variants in your callset.  The concordance is broken into separate results sections for SNPs and indels.  Summary and detailed statistics are reported.  Note that for any pair of variants to compare, only the alleles for the samples under interrogation are considered and MNP, Symbolic, and Mixed classes of variants are not included.";
     static final String USAGE_DETAILS = "<br />" +
             "<h4>Usage example:</h4>" +
             "<pre>" +
             "java -jar picard.jar GenotypeConcordance \\<br />" +
             "     -CALL_VCF=/Users/VCF1.vcf \\<br />" +
             "     -O=/Users/GConcordance.vcf \\<br />" +
-            "     -TRUTH_VCF=/Users/GIAB.vcf  \\<br />" +
+            "     -TRUTH_VCF=/Users/GIAB.vcf \\<br />" +
             "     -TRUTH_SAMPLE=sample#  <br />" +
             "</pre>" +
             "<hr />";
