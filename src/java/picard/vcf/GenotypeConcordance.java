@@ -78,8 +78,7 @@ public class GenotypeConcordance extends CommandLineProgram {
             "      -TRUTH_SAMPLE=sample#  \\<br />" +
             "</pre>" +
             "<hr />";
-
-public class GenotypeConcordance extends CommandLineProgram {
+    
     @Option(shortName = "TV", doc="The VCF containing the truth sample")
     public File TRUTH_VCF;
 
