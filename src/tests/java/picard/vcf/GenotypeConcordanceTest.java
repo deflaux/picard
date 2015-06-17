@@ -182,9 +182,11 @@ public class GenotypeConcordanceTest {
         genotypeConcordance.TRUTH_SAMPLE = "NA12878";
         genotypeConcordance.CALL_VCF = CEU_TRIOS_SNPS_VCF;
         genotypeConcordance.CALL_SAMPLE = "NA12891";
+        //genotypeConcordance.MISSING_SITES_HOM_REF = true;
         Assert.assertEquals(genotypeConcordance.instanceMain(new String[0]), 0);
 
         nonZeroCounts.clear();
+        //nonZeroCounts.put(new TruthAndCallStates(TruthState.MISSING, CallState.HOM_REF), 10);
         nonZeroCounts.put(new TruthAndCallStates(TruthState.HOM_REF, CallState.HET_REF_VAR1), 31);
         nonZeroCounts.put(new TruthAndCallStates(TruthState.HET_REF_VAR1, CallState.HOM_REF), 30);
         nonZeroCounts.put(new TruthAndCallStates(TruthState.HET_REF_VAR1, CallState.HET_REF_VAR1), 50);

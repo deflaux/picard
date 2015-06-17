@@ -104,6 +104,9 @@ public class GenotypeConcordance extends CommandLineProgram {
     @Option(doc="If true, use the VCF index, else iterate over the entire VCF.", optional = true)
     public boolean USE_VCF_INDEX = false;
 
+    @Option(shortName = "MISSING_HOM", doc="If true, missing sites in the truth set will be treated as hom ref sites. Useful when hom ref sites are left out of the truth set.")
+    public boolean MISSING_SITES_HOM_REF = true;
+
     private final Log log = Log.getInstance(GenotypeConcordance.class);
     private final ProgressLogger progress = new ProgressLogger(log, 10000, "checked", "variants");
 
@@ -312,7 +315,7 @@ public class GenotypeConcordance extends CommandLineProgram {
     **/
     private void outputDetailMetricsFile(final VariantContext.Type variantType, final MetricsFile<GenotypeConcordanceDetailMetrics,?> genotypeConcordanceDetailMetricsFile,
                                          final GenotypeConcordanceCounts counter, final String truthSampleName, final String callSampleName) {
-        final GenotypeConcordanceScheme scheme = new GenotypeConcordanceScheme();
+        final GenotypeConcordanceScheme scheme = new GenotypeConcordanceScheme(MISSING_SITES_HOM_REF);
         for (final TruthState truthState : TruthState.values()) {
             for (final CallState callState : CallState.values()) {
                 final int count = counter.getCount(truthState, callState);
@@ -358,6 +361,7 @@ public class GenotypeConcordance extends CommandLineProgram {
         Genotype truthGenotype = null, callGenotype = null;
 
         // Site level checks
+        // Added potential to include missing sites as hom ref..
         if (truthContext == null) truthState = TruthState.MISSING;
         else if (truthContext.isMixed()) truthState = TruthState.IS_MIXED;
         else if (truthContext.isFiltered()) truthState = TruthState.VC_FILTERED;
