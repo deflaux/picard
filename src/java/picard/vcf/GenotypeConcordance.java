@@ -72,13 +72,13 @@ public class GenotypeConcordance extends CommandLineProgram {
             "<h4>Usage example:</h4>" +
             "<pre>" +
             "java -jar picard.jar GenotypeConcordance \\<br />" +
-            "      -CALL_VCF=/Users/VCF1.vcf \\<br />" +
-            "      -O=/Users/GConcordance.vcf \\<br />" +
-            "      -TRUTH_VCF=/Users/GIAB.vcf  \\<br />" +
-            "      -TRUTH_SAMPLE=sample#  \\<br />" +
+            "     -CALL_VCF=/Users/VCF1.vcf \\<br />" +
+            "     -O=/Users/GConcordance.vcf \\<br />" +
+            "     -TRUTH_VCF=/Users/GIAB.vcf  \\<br />" +
+            "     -TRUTH_SAMPLE=sample#  <br />" +
             "</pre>" +
             "<hr />";
-    
+
     @Option(shortName = "TV", doc="The VCF containing the truth sample")
     public File TRUTH_VCF;
 
