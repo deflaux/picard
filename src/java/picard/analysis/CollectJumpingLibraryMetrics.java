@@ -72,8 +72,7 @@ public class CollectJumpingLibraryMetrics extends CommandLineProgram {
             "        -O=/Users/jumpingLib.sam " +
             "</pre>" +
             "<hr />";
-
-
+    
     // Usage and parameters
 
     @Option(shortName = StandardOptionDefinitions.INPUT_SHORT_NAME, doc = "BAM file(s) of reads with duplicates marked")
