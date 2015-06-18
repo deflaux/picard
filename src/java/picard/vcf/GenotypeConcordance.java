@@ -78,7 +78,7 @@ public class GenotypeConcordance extends CommandLineProgram {
             "     -TRUTH_SAMPLE=sample#  <br />" +
             "</pre>" +
             "" +
-            "<h4>Output Metrics</h4><br />" +
+            "<h3>Output Metrics</h3><br />" +
 
             "Output metrics include GenotypeConcordanceContingencyMetrics, GenotypeConcordanceSummaryMetrics, and GenotypeConcordanceDetailMetrics.  GenotypeConcordanceContingencyMetrics is a class that holds metrics about the Genotype Concordance contingency tables.  These contingencies are based on the comparison of a call VCF and a 'truth' VCF.  The 'truth' VCF can be a VCF obtained from the Genome In A Bottle Consortium (GIAB) https://sites.stanford.edu/abms/giab.  Tables include the numbers of true-positive (TP), true-negative (TN), false-positive (FP), and false-negative (FN) variant calls.  These are defined as follows: a TP variant call indicates that a variant in the call VCF matches the 'truth' VCF. True-negative (TN) calls indicate both the call VCF and the truth VCF are reference alleles.  A false-positive (FP) variant call is a called variant but is a reference-call in the truth VCF, while a false-negative call incorrectly identifies a true variant as a reference call.  Please see http://broadinstitute.github.io/picard/picard-metric-definitions.html#GenotypeConcordanceContingencyMetrics for additional details.<br /><br /> " +
             "" +
