@@ -64,7 +64,6 @@ public class CollectJumpingLibraryMetrics extends CommandLineProgram {
     static final String USAGE = "High level metrics about the presence of outward- and inward-facing pairs within a SAM file generated with a jumping library, produced by the CollectJumpingLibraryMetrics program.  <br />" +
             "Jumping libraries contain DNA fragments from noncontiguous regions.  These libraries are used primarily for sequencing repetitive regions or structural rearrangements.  This tool is primarily used to characterize the degree of chimeric inserts arising as artifacts of PCR amplification. Outward facing pairs are considered jumping and are distal to one another while and inward facing pairs are proximal (nonjumping).  Chimeric inserts can substantially complicate downstream analyses.  <br />" +
             "This program gets all data for computation from the first read in each pair and assumes that the mapping quality (MQ) tag is set with the mate's mapping quality.  If the MQ tag is not set, then the program assumes that the mate's MQ is greater than or equal to MINIMUM_MAPPING_QUALITY (default value is 0). Please see http://broadinstitute.github.io/picard/picard-metric-definitions.html#JumpingLibraryMetrics for additional details and explanations of the output metrics. <br />" +
-            "" +
             "<h4>Usage example:</h4>" +
             "<pre>" +
             "    java -jar picard.jar CollectJumpingLibraryMetrics \\<br />" +
@@ -72,7 +71,7 @@ public class CollectJumpingLibraryMetrics extends CommandLineProgram {
             "        -O=/Users/jumpingLib.sam " +
             "</pre>" +
             "<hr />";
-    
+
     // Usage and parameters
 
     @Option(shortName = StandardOptionDefinitions.INPUT_SHORT_NAME, doc = "BAM file(s) of reads with duplicates marked")
