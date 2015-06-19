@@ -73,7 +73,8 @@ public class CollectRrbsMetrics extends CommandLineProgram {
             "        -M=/Users/MyUName/rrbsmetrics" +
             "        -R=/Users/MyUName/human_b37_20.fasta" +
             "</pre>" +
-            "<hr />";
+            "<hr />"
+            ;
 
 // Path to R file for plotting purposes
 
