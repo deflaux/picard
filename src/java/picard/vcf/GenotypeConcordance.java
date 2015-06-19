@@ -96,7 +96,8 @@ public class GenotypeConcordance extends CommandLineProgram {
             "defined as follows: a TP variant call indicates that a variant in the call VCF matches the 'truth' VCF." +
             "True-negative (TN) calls indicate both the call VCF and the truth VCF are reference alleles.  A " +
             "false-positive (FP) variant call is a called variant but is a reference-call in the truth VCF, while" +
-            " a false-negative call incorrectly identifies a true variant as a reference call.  " +
+            " a false-negative call incorrectly identifies a true variant as a reference call.  Genotype concordance " +
+            "is the fraction of correct genotypes divided by the total number of TP variant calls.  " +
             "Please see http://broadinstitute.github.io/picard/picard-metric-definitions.html#GenotypeConcordance" +
             "ContingencyMetrics for additional details.<br /><br /> " +
             "" +
