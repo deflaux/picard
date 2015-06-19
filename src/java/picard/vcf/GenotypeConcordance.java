@@ -105,7 +105,7 @@ public class GenotypeConcordance extends CommandLineProgram {
     public boolean USE_VCF_INDEX = false;
 
     @Option(shortName = "MISSING_HOM", doc="If true, missing sites in the truth set will be treated as hom ref sites. Useful when hom ref sites are left out of the truth set.")
-    public boolean MISSING_SITES_HOM_REF = true;
+    public boolean MISSING_SITES_HOM_REF = false;
 
     private final Log log = Log.getInstance(GenotypeConcordance.class);
     private final ProgressLogger progress = new ProgressLogger(log, 10000, "checked", "variants");
@@ -283,9 +283,9 @@ public class GenotypeConcordance extends CommandLineProgram {
 
         // Calculate and store the summary-level metrics
         final MetricsFile<GenotypeConcordanceSummaryMetrics,?> genotypeConcordanceSummaryMetricsFile = getMetricsFile();
-        GenotypeConcordanceSummaryMetrics summaryMetrics = new GenotypeConcordanceSummaryMetrics(SNP, snpCounter, TRUTH_SAMPLE, CALL_SAMPLE);
+        GenotypeConcordanceSummaryMetrics summaryMetrics = new GenotypeConcordanceSummaryMetrics(SNP, snpCounter, TRUTH_SAMPLE, CALL_SAMPLE, MISSING_SITES_HOM_REF);
         genotypeConcordanceSummaryMetricsFile.addMetric(summaryMetrics);
-        summaryMetrics = new GenotypeConcordanceSummaryMetrics(INDEL, indelCounter, TRUTH_SAMPLE, CALL_SAMPLE);
+        summaryMetrics = new GenotypeConcordanceSummaryMetrics(INDEL, indelCounter, TRUTH_SAMPLE, CALL_SAMPLE, MISSING_SITES_HOM_REF);
         genotypeConcordanceSummaryMetricsFile.addMetric(summaryMetrics);
         genotypeConcordanceSummaryMetricsFile.write(summaryMetricsFile);
 
@@ -297,9 +297,9 @@ public class GenotypeConcordance extends CommandLineProgram {
 
         // Calculate and score the contingency metrics
         final MetricsFile<GenotypeConcordanceContingencyMetrics,?> genotypeConcordanceContingencyMetricsFile = getMetricsFile();
-        GenotypeConcordanceContingencyMetrics contingencyMetrics = new GenotypeConcordanceContingencyMetrics(SNP, snpCounter, TRUTH_SAMPLE, CALL_SAMPLE);
+        GenotypeConcordanceContingencyMetrics contingencyMetrics = new GenotypeConcordanceContingencyMetrics(SNP, snpCounter, TRUTH_SAMPLE, CALL_SAMPLE, MISSING_SITES_HOM_REF);
         genotypeConcordanceContingencyMetricsFile.addMetric(contingencyMetrics);
-        contingencyMetrics = new GenotypeConcordanceContingencyMetrics(INDEL, indelCounter, TRUTH_SAMPLE, CALL_SAMPLE);
+        contingencyMetrics = new GenotypeConcordanceContingencyMetrics(INDEL, indelCounter, TRUTH_SAMPLE, CALL_SAMPLE, MISSING_SITES_HOM_REF);
         genotypeConcordanceContingencyMetricsFile.addMetric(contingencyMetrics);
         genotypeConcordanceContingencyMetricsFile.write(contingencyMetricsFile);
 
@@ -315,7 +315,10 @@ public class GenotypeConcordance extends CommandLineProgram {
     **/
     private void outputDetailMetricsFile(final VariantContext.Type variantType, final MetricsFile<GenotypeConcordanceDetailMetrics,?> genotypeConcordanceDetailMetricsFile,
                                          final GenotypeConcordanceCounts counter, final String truthSampleName, final String callSampleName) {
-        final GenotypeConcordanceScheme scheme = new GenotypeConcordanceScheme(MISSING_SITES_HOM_REF);
+        final GenotypeConcordanceSchemeFactory schemeFactory = new GenotypeConcordanceSchemeFactory();
+        final GenotypeConcordanceScheme scheme = schemeFactory.getScheme(MISSING_SITES_HOM_REF);
+        scheme.initiateScheme();
+        scheme.validateScheme();
         for (final TruthState truthState : TruthState.values()) {
             for (final CallState callState : CallState.values()) {
                 final int count = counter.getCount(truthState, callState);
