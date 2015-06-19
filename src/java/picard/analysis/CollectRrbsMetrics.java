@@ -74,7 +74,8 @@ public class CollectRrbsMetrics extends CommandLineProgram {
             "        I=input.bam \\<br />" +
             "        O=output.txt" +
             "</pre>" +
-            "<hr />";
+            "<hr />"
+            ;
 
 // Path to R file for plotting purposes
 
