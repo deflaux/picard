@@ -67,16 +67,16 @@ public class CollectRrbsMetrics extends CommandLineProgram {
     public static final String USAGE_DETAILS = "<br />" +
             "This tool calculates and reports QC metrics for RRBS data, based on the methylation status at individual C/G bases as well as CpG sites across all reads in the input BAM/SAM file.  Cytosine methylation is a key component in epigenetic regulation of gene expression.  Bisulfite sequencing is a technique used to analyze the genome-wide methylation profiles on a single nucleotide level [doi:10.1093/nar/gki901].  Sodium bisulfite efficiently and selectively deaminates unmethylated cytosine to uracil without affecting 5-methyl (methylated) cytosine.  PCR amplification with a proofreading-deficient polymerase prevents amplification of unmethylated fragments. In contrast, methylated sites are preserved and selectively amplified are used to identify the methylated regions of a genome.  The fragments that comprise the reduced genome (~1% of the total) still include the majority of promoters, as well as regions such as repeated sequences that are difficult to profile using conventional bisulfite sequencing approaches." +
             "<br />" +
+            "" +
             "<h4>Usage example:</h4>" +
             "<pre>" +
-            "    java -jar picard.jar CollectAlignmentMetrics \\<br />" +
-            "        R=reference.fasta \\<br />" +
-            "        I=input.bam \\<br />" +
-            "        O=output.txt" +
+            "   java -jar picard.jar CollectRrbsMetrics" +
+            "        -I=/Users/MyUName/MyBAM.bam" +
+            "        -M=/Users/MyUName/rrbsmetrics" +
+            "        -R=/Users/MyUName/human_b37_20.fasta" +
             "</pre>" +
-            "<hr />"
+            "<hr />";
             ;
-
 // Path to R file for plotting purposes
 
 private static final String R_SCRIPT = "picard/analysis/rrbsQc.R";
