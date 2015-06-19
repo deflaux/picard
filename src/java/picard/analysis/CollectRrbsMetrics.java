@@ -76,7 +76,7 @@ public class CollectRrbsMetrics extends CommandLineProgram {
             "        -R=/Users/MyUName/human_b37_20.fasta" +
             "</pre>" +
             "<hr />";
-            ;
+            
 // Path to R file for plotting purposes
 
 private static final String R_SCRIPT = "picard/analysis/rrbsQc.R";
