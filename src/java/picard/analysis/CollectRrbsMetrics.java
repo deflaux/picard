@@ -58,7 +58,7 @@ import java.util.Set;
  */
 
 @CommandLineProgramProperties(
-        usage = CollectRrbsMetrics.USAGE_SUMMARY,
+        usage = CollectRrbsMetrics.USAGE_SUMMARY + CollectRrbsMetrics.USAGE_DETAILS,
         usageShort = CollectRrbsMetrics.USAGE_DETAILS,
         programGroup = Metrics.class
 )
