@@ -72,10 +72,10 @@ public class CollectRrbsMetrics extends CommandLineProgram {
             "nucleotide level [doi:10.1093/nar/gki901].  Sodium bisulfite efficiently and selectively deaminates " +
             "unmethylated cytosine to uracil without affecting 5-methyl (methylated) cytosine.  PCR amplification " +
             "with a proofreading-deficient polymerase prevents amplification of unmethylated fragments. In contrast, " +
-            "methylated sites are preserved and selectively amplified are used to identify the methylated regions of a" +
-            "genome.  The fragments that comprise the reduced genome (~1% of the total) still include the majority of" +
-            "promoters, as well as regions such as repeated sequences that are difficult to profile using conventional" +
-            "bisulfite sequencing approaches." +
+            "methylated sites are preserved and selectively amplified.  Sequencing of the amplified fragments" +
+            "identifies the methylated regions of a genome.  Since only a fraction of the genome is methylated," +
+            "the amplified fragments comprise (~1% of the total) yet still include the majority of promoters, " +
+            "as well as repeated sequence regions that are difficult to profile using conventional techniques." +
             "<br />" +
             "<h4>Usage example:</h4>" +
             "<pre>" +
@@ -84,7 +84,11 @@ public class CollectRrbsMetrics extends CommandLineProgram {
             "        -M=/Users/MyUName/rrbsmetrics" +
             "        -R=/Users/MyUName/human_b37_20.fasta" +
             "</pre>" +
-            "<hr />";
+            "<hr />" +
+            "" +
+            "For additional details see: " +
+            "http://broadinstitute.github.io/picard/picard-metric-definitions.html#RrbsCpgDetailMetrics and " +
+            "http://broadinstitute.github.io/picard/picard-metric-definitions.html#RrbsSummaryMetrics";
 
 // Path to R file for plotting purposes
 
