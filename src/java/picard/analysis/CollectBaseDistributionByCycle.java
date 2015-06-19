@@ -29,17 +29,17 @@ import picard.util.RExecutor;
 
 public class CollectBaseDistributionByCycle extends SinglePassSamProgram {
     static final String USAGE_SUMMARY = "Program to chart the nucleotide distribution per cycle in a SAM or BAM file.";
-    static final String USAGE_DETAILS = "Charts the base distribution per cycle in a SAM or BAM file from a sequencing" +
-            "run.  In addition to charting the percentages of each nucleotide for each sequencing cycle, this tool" +
-            "outputs the number of uncharacterized nucleotides 'N' to assess high-level instrument/sample quality " +
-            "control during a run.<br />" +
+    static final String USAGE_DETAILS = "Charts the base distribution per cycle in a SAM or BAM file from a " +
+            "sequencing un.  In addition to charting the percentages of each nucleotide for each sequencing cycle," +
+            "this tool outputs the number of uncharacterized nucleotides 'N' to assess high-level instrument/sample" +
+            "quality control during a run.<br />" +
             "<h4>Usage example:</h4>" +
-                    "<pre>" +
-                            "java -jar picard.jar CollectBaseDistributionByCycle \\<br />" +
-                            "     -I=/Users/MyBAMfile.bam \\<br />" +
-                            "     -O=/Users/collectbasedistbycycle.bam <br />\\" +
-                            "     -CHART=/Users/collectbasedistbycycle.pdf \\<br /> " +
-                    "</pre>" +
+            "<pre>" +
+            "java -jar picard.jar CollectBaseDistributionByCycle \\<br />" +
+            "     -I=/Users/MyBAMfile.bam \\<br />" +
+            "     -O=/Users/collectbasedistbycycle.bam \\<br />" +
+            "     -CHART=/Users/collectbasedistbycycle.pdf \\<br />" +
+            "</pre>" +
            "Explanations of the detailed outputs can be found at the following link:<br /> " +
            "http://broadinstitute.github.io/picard/picard-metric-definitions.html#BaseDistributionByCycleMetrics"
                             ;
