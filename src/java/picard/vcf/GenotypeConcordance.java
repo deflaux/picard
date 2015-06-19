@@ -67,8 +67,15 @@ import static htsjdk.variant.variantcontext.VariantContext.Type.*;
         programGroup = VcfOrBcf.class
 )
 public class GenotypeConcordance extends CommandLineProgram {
-    static final String USAGE_SUMMARY = "Calculates the concordance between genotype data for samples in two different VCFs, your callset and a standard or 'truthset'.  Genotype concordance is calculated by dividing the number of variant genotypes in your call set that match the truthset by the total number of variants in your callset.  The concordance is broken into separate results sections for SNPs and indels.  Summary and detailed statistics are reported.  Note that for any pair of variants to compare, only the alleles for the samples under interrogation are considered and MNP, Symbolic, and Mixed classes of variants are not included.";
-    static final String USAGE_DETAILS = "<br />" +
+    static final String USAGE_SUMMARY = "Calculates the concordance between genotype data for samples in two different" +
+            "VCFs, your callset and a standard or 'truthset'.";
+    static final String USAGE_DETAILS = "Genotype concordance is calculated by dividing the number of variant " +
+            "genotypes in your call set that match the truthset by the total number of variants in your callset.  " +
+            "The concordance is broken into separate results sections for SNPs and indels.  Summary " +
+            "and detailed statistics are reported.  Note that for any pair of variants to compare, only the alleles for" +
+            "the samples under interrogation are considered and MNP, Symbolic, and Mixed classes of variants are" +
+            "not included. <br />" +
+            "" +
             "<h4>Usage example:</h4>" +
             "<pre>" +
             "java -jar picard.jar GenotypeConcordance \\<br />" +
@@ -78,13 +85,30 @@ public class GenotypeConcordance extends CommandLineProgram {
             "     -TRUTH_SAMPLE=sample#  <br />" +
             "</pre>" +
             "" +
-            "<h3>Output Metrics</h3><br />" +
+            "<h3>Output Metrics:</h3><br />" +
 
-            "Output metrics include GenotypeConcordanceContingencyMetrics, GenotypeConcordanceSummaryMetrics, and GenotypeConcordanceDetailMetrics.  GenotypeConcordanceContingencyMetrics is a class that holds metrics about the Genotype Concordance contingency tables.  These contingencies are based on the comparison of a call VCF and a 'truth' VCF.  The 'truth' VCF can be a VCF obtained from the Genome In A Bottle Consortium (GIAB) https://sites.stanford.edu/abms/giab.  Tables include the numbers of true-positive (TP), true-negative (TN), false-positive (FP), and false-negative (FN) variant calls.  These are defined as follows: a TP variant call indicates that a variant in the call VCF matches the 'truth' VCF. True-negative (TN) calls indicate both the call VCF and the truth VCF are reference alleles.  A false-positive (FP) variant call is a called variant but is a reference-call in the truth VCF, while a false-negative call incorrectly identifies a true variant as a reference call.  Please see http://broadinstitute.github.io/picard/picard-metric-definitions.html#GenotypeConcordanceContingencyMetrics for additional details.<br /><br /> " +
+            "Output metrics include GenotypeConcordanceContingencyMetrics, GenotypeConcordanceSummaryMetrics, and " +
+            "GenotypeConcordanceDetailMetrics.  GenotypeConcordanceContingencyMetrics is a class that holds metrics " +
+            "about the Genotype Concordance contingency tables.  These contingencies are based on the comparison of " +
+            "a call VCF and a 'truth' VCF.  The 'truth' VCF can be a VCF obtained from the Genome In A Bottle " +
+            "Consortium (GIAB) https://sites.stanford.edu/abms/giab.  Tables include the numbers of true-positive " +
+            "(TP), true-negative (TN), false-positive (FP), and false-negative (FN) variant calls.  These are " +
+            "defined as follows: a TP variant call indicates that a variant in the call VCF matches the 'truth' VCF." +
+            "True-negative (TN) calls indicate both the call VCF and the truth VCF are reference alleles.  A " +
+            "false-positive (FP) variant call is a called variant but is a reference-call in the truth VCF, while" +
+            " a false-negative call incorrectly identifies a true variant as a reference call.  " +
+            "Please see http://broadinstitute.github.io/picard/picard-metric-definitions.html#GenotypeConcordance" +
+            "ContingencyMetrics for additional details.<br /><br /> " +
             "" +
-            "GenotypeConcordanceSummaryMetrics is a class that holds summary metrics about Genotype Concordance including: values for sensitivity, specificity, and positive predictive values.  Please see http://broadinstitute.github.io/picard/picard-metric-definitions.html#GenotypeConcordanceSummaryMetrics for details on how these metrics are calculated.<br /><br /> " +
+            "GenotypeConcordanceSummaryMetrics is a class that holds summary metrics about Genotype Concordance " +
+            "including: values for sensitivity, specificity, and positive predictive values.  Please see " +
+            "http://broadinstitute.github.io/picard/picard-metric-definitions.html#GenotypeConcordanceSummaryMetrics " +
+            "for details on how these metrics are calculated.<br /><br /> " +
             "" +
-            "GenotypeConcordanceDetailMetrics is a class that holds detailed metrics about Genotype Concordance including the numbers of SNPs and Indels and contingency values.  Please see http://broadinstitute.github.io/picard/picard-metric-definitions.html#GenotypeConcordanceDetailMetrics.<br /><br />" +
+            "GenotypeConcordanceDetailMetrics is a class that holds detailed metrics about Genotype Concordance" +
+            " including the numbers of SNPs and Indels and contingency values.  " +
+            "Please see " +
+            "http://broadinstitute.github.io/picard/picard-metric-definitions.html#GenotypeConcordanceDetailMetrics." +
             "<hr />"
             ;
 
