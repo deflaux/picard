@@ -40,6 +40,7 @@ public class CollectBaseDistributionByCycle extends SinglePassSamProgram {
             "     -O=/Users/collectbasedistbycycle.bam \\<br />" +
             "     -CHART=/Users/collectbasedistbycycle.pdf \\<br />" +
             "</pre>" +
+            "<hr />" +
            "Explanations of the detailed outputs can be found at the following link:<br /> " +
            "http://broadinstitute.github.io/picard/picard-metric-definitions.html#BaseDistributionByCycleMetrics"
                             ;
