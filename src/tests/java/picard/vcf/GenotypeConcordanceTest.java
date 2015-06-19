@@ -168,7 +168,6 @@ public class GenotypeConcordanceTest {
         final GenotypeConcordanceSchemeFactory schemeFactory = new GenotypeConcordanceSchemeFactory();
         final GenotypeConcordanceScheme scheme = schemeFactory.getScheme(false);
         scheme.initiateScheme();
-        scheme.validateScheme();
         concordanceCounts.validateCountsAgainstScheme(scheme);
 
         Assert.assertEquals(fmt.format(concordanceCounts.getSensitivity(scheme, GenotypeConcordanceCounts.HET_TRUTH_STATES)), "1");
@@ -254,7 +253,6 @@ public class GenotypeConcordanceTest {
         final GenotypeConcordanceSchemeFactory schemeFactory = new GenotypeConcordanceSchemeFactory();
         final GenotypeConcordanceScheme scheme = schemeFactory.getScheme(false);
         scheme.initiateScheme();
-        scheme.validateScheme();
         concordanceCounts.validateCountsAgainstScheme(scheme);
 
         Assert.assertEquals(fmt.format(concordanceCounts.getSensitivity(scheme, GenotypeConcordanceCounts.HET_TRUTH_STATES)), "1");
