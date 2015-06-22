@@ -55,18 +55,18 @@ import java.util.Set;
 
 public class CollectInsertSizeMetrics extends SinglePassSamProgram {
     static final String USAGE_BRIEF = "<h4>Brief:</h4>Metrics about the insert size distribution of a paired-end library<br />";
-    static final String USAGE_SUMMARY = "<br /><h4>Summary:</h4> InsertSizeMetrics - Metrics created by the " +
-            "CollectInsertSizeMetrics program and usually" +
-            " written to a file with the extension '.insert_size_metrics'." +
-            " <br />  Reads a SAM or BAM file and writes a file containing metrics about the statistical " +
-            "distribution of insert size (excluding duplicates) for paired-end tagged sequencing runs*.  " +
-            "The inserts correspond to the sequence between two facing read pairs, usually 300 - 500 bases, " +
-            "but can be varied " +
-            "(http://www.illumina.com/technology/next-generation-sequencing/paired-end-sequencing_assay.html). " +
-            "Generates tabular outputs as well as a histogram plot. <br />" +
+    static final String USAGE_SUMMARY = "<br /><h4>Summary:</h4> Paired-end tags are short DNA fragments that " +
+            "are juxtaposed in a construct by a discrete amount of sequence (generally no more than " +
+            "a few hundred bases).  These tags are created to enable overlapping reads to accurately cover repetitive " +
+            "sequences and structural rearrangements that confound alignment programs.  For additional" +
+            "information about paired-end tags, see " +
+            "(http://www.illumina.com/technology/next-generation-sequencing/paired-end-sequencing_assay.html).<br />" +
             "" +
-            "For additional information, see " +
-            "http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics" +
+            "The metrics created by the CollectInsertSizeMetrics program are usually written to a file with the" +
+            " extension '.insert_size_metrics'." +
+            "<br />  This file contains metrics about the statistical distribution of insert sizes " +
+            "(excluding duplicates) for paired-end tagged sequencing runs.*  This tool generates tabular outputs" +
+            " as well as a histogram plot. <br />" +
             "" +
             "<h4>Usage example:</h4>" +
             "java -jar picard.jar CollectInsertSizeMetrics \\<br />" +
@@ -74,7 +74,11 @@ public class CollectInsertSizeMetrics extends SinglePassSamProgram {
             "     -O=/output.insert_size_metrics \\<br />" +
             "     -H=/insert_size_histogram.pdf \\<br />" +
             "     -M=0.5" +
-            "<br /><h4>* Fullwood MJ, Wei CL, Liu ET, Ruan Y. 2009. Next-Generation DNA sequencing of paired-end tags " +
+            "" +
+            "<br />For additional information, see " +
+            "http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics" +
+            "" +
+            "<br />* Fullwood MJ, Wei CL, Liu ET, Ruan Y. 2009. Next-Generation DNA sequencing of paired-end tags " +
             "(PET) for transcriptome and genome analyses. Genome Research. 19:521–532. PMID 19339662." +
             "<hr />"
     ;
