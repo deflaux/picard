@@ -75,10 +75,10 @@ public class CollectInsertSizeMetrics extends SinglePassSamProgram {
             "     -H=/insert_size_histogram.pdf \\<br />" +
             "     -M=0.5" +
             "" +
-            "<br />For additional information, see " +
+            "<br /><br />For additional information, see " +
             "http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics" +
             "" +
-            "<br />* Fullwood MJ, Wei CL, Liu ET, Ruan Y. 2009. Next-Generation DNA sequencing of paired-end tags " +
+            "<br /><br />* Fullwood MJ, Wei CL, Liu ET, Ruan Y. 2009. Next-Generation DNA sequencing of paired-end tags " +
             "(PET) for transcriptome and genome analyses. Genome Research. 19:521–532. PMID 19339662." +
             "<hr />"
     ;
