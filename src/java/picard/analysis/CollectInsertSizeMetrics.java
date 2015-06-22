@@ -57,7 +57,7 @@ public class CollectInsertSizeMetrics extends SinglePassSamProgram {
     static final String USAGE_BRIEF = "<h4>Brief:</h4>Metrics about the insert size distribution of a paired-end library<br />";
     static final String USAGE_SUMMARY = "<br /><h4>Summary:</h4> Paired-end tags are short DNA fragments that " +
             "are juxtaposed in a construct by a discrete amount of sequence (generally no more than " +
-            "a few hundred bases).  These tags are created to enable overlapping reads to accurately cover repetitive " +
+            "a few hundred bases)*.  These tags are created to enable overlapping reads to accurately cover repetitive " +
             "sequences and structural rearrangements that confound alignment programs.  For additional" +
             "information about paired-end tags, see " +
             "(http://www.illumina.com/technology/next-generation-sequencing/paired-end-sequencing_assay.html).<br />" +
@@ -65,7 +65,7 @@ public class CollectInsertSizeMetrics extends SinglePassSamProgram {
             "The metrics created by the CollectInsertSizeMetrics program are usually written to a file with the" +
             " extension '.insert_size_metrics'." +
             "<br />  This file contains metrics about the statistical distribution of insert sizes " +
-            "(excluding duplicates) for paired-end tagged sequencing runs.*  This tool generates tabular outputs" +
+            "(excluding duplicates) for paired-end tagged sequencing runs.  This tool generates tabular outputs" +
             " as well as a histogram plot. <br />" +
             "" +
             "<h4>Usage example:</h4>" +
