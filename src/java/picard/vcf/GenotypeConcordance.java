@@ -86,7 +86,6 @@ public class GenotypeConcordance extends CommandLineProgram {
             "</pre>" +
             "" +
             "<h4>Output Metrics:</h4>" +
-
             "Output metrics include GenotypeConcordanceContingencyMetrics, GenotypeConcordanceSummaryMetrics, and " +
             "GenotypeConcordanceDetailMetrics.  GenotypeConcordanceContingencyMetrics is a class that holds metrics " +
             "about the Genotype Concordance contingency tables.  These contingencies are based on the comparison of " +
