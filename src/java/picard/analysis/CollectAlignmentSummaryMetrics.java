@@ -70,7 +70,18 @@ import java.util.Set;
 )
 public class CollectAlignmentSummaryMetrics extends SinglePassSamProgram {
     static final String USAGE_SUMMARY = "Produces a file containing summary alignment metrics from a SAM or BAM.";
-    static final String USAGE_DETAILS = "<br />" +
+    static final String USAGE_DETAILS = "Using read outputs from NGS technologies, this tool provides detailed metrics" +
+            "regarding the quality of the alignments of these reads to a reference sequence. These metrics include " +
+            "the numbers of" +
+            "reads that passed machine signal-to-noise threshold quality filters as well as values representing the" +
+            "degree of alignment to a reference sequence. Please see http://broadinstitute.github.io/picard/picard-" +
+            "metric-definitions.html#AlignmentSummaryMetrics for detailed explanations of each metric.  Additional" +
+            "information can be found by downloading the following documents: (http://support.illumina.com/content/" +
+            "dam/illumina-marketing/documents/products/technotes/hiseq-x-percent-pf-technical-note-770-2014-043.pdf)" +
+            "and (http://support.illumina.com/content/dam/illumina-support/documents/documentation/" +
+            "system_documentation/hiseqx/hiseq-x-system-guide-15050091-d.pdf)." +
+            "" +
+            "<br />" +
             "<h4>Usage example:</h4>" +
             "<pre>" +
             "    java -jar picard.jar CollectAlignmentMetrics \\<br />" +
