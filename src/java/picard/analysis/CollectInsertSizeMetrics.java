@@ -54,10 +54,10 @@ import java.util.Set;
 )
 
 public class CollectInsertSizeMetrics extends SinglePassSamProgram {
-    static final String USAGE_BRIEF = "<h4>Brief:</h4>Metrics about the insert size distribution of a paired-end librar<br />";
-    static final String USAGE_SUMMARY = "<br /><h4>Summary:</h4> InsertSizeMetrics - Metrics about the insert size" +
-            " distribution of a paired-end library, created by the CollectInsertSizeMetrics program and usually" +
-            " written to a file with the extension '.insert_size_metrics'. In addition, the insert size distribution" +
+    static final String USAGE_BRIEF = "<h4>Brief:</h4>Metrics about the insert size distribution of a paired-end library<br />";
+    static final String USAGE_SUMMARY = "<br /><h4>Summary:</h4> InsertSizeMetrics - Metrics created by the " +
+            "CollectInsertSizeMetrics program and usually" +
+            " written to a file with the extension '.insert_size_metrics'." +
             " <br />  Reads a SAM or BAM file and writes a file containing metrics about the statistical " +
             "distribution of insert size (excluding duplicates) for paired-end tagged sequencing runs*.  " +
             "The inserts correspond to the sequence between two facing read pairs, usually 300 - 500 bases, " +
