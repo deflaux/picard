@@ -22,15 +22,15 @@ import picard.util.RExecutor;
 
 
 @CommandLineProgramProperties(
-        usage = CollectBaseDistributionByCycle.USAGE_SUMMARY + CollectBaseDistributionByCycle.USAGE_DETAILS,
-        usageShort = CollectBaseDistributionByCycle.USAGE_SUMMARY,
+        usage = CollectBaseDistributionByCycle.USAGE_BRIEF + CollectBaseDistributionByCycle.USAGE_SUMMARY,
+        usageShort = CollectBaseDistributionByCycle.USAGE_BRIEF,
         programGroup = Metrics.class
 )
 
 public class CollectBaseDistributionByCycle extends SinglePassSamProgram {
-    static final String USAGE_SUMMARY = "Program to chart the nucleotide distribution per cycle in a SAM or BAM file.";
-    static final String USAGE_DETAILS = "Charts the base distribution per cycle in a SAM or BAM file from a " +
-            "sequencing un.  In addition to charting the percentages of each nucleotide for each sequencing cycle," +
+    static final String USAGE_BRIEF = "<h4>Brief:</h4>Program to chart the nucleotide distribution per cycle in a SAM or BAM file.";
+    static final String USAGE_SUMMARY = "<h4>Summary:</h4>Charts the base distribution per cycle in a SAM or BAM file from a " +
+            "sequencing run.  In addition to charting the percentages of each nucleotide for each cycle," +
             "this tool outputs the number of uncharacterized nucleotides 'N' to assess high-level instrument/sample" +
             "quality control during a run.<br />" +
             "<h4>Usage example:</h4>" +
