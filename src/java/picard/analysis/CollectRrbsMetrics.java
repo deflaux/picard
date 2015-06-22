@@ -58,14 +58,14 @@ import java.util.Set;
  */
 
 @CommandLineProgramProperties(
-        usage = CollectRrbsMetrics.USAGE_SUMMARY + CollectRrbsMetrics.USAGE_DETAILS,
-        usageShort = CollectRrbsMetrics.USAGE_SUMMARY,
+        usage = CollectRrbsMetrics.USAGE_SUMMARY + CollectRrbsMetrics.USAGE_BRIEF,
+        usageShort = CollectRrbsMetrics.USAGE_BRIEF,
         programGroup = Metrics.class
 )
 
 public class CollectRrbsMetrics extends CommandLineProgram {
-    static final String USAGE_SUMMARY = "Collects metrics about reduced representation bisulfite sequencing (RRBS)";
-    static final String USAGE_DETAILS = "This tool calculates and reports QC metrics for RRBS data, based on the " +
+    static final String USAGE_BRIEF = "<h4>Brief:</h4> Collects metrics about reduced representation bisulfite sequencing (RRBS)";
+    static final String USAGE_SUMMARY = "<h4>Summary:</h4>This tool calculates and reports QC metrics for RRBS data, based on the " +
             "methylation status at individual C/G bases as well as CpG sites across all reads in the input " +
             "BAM/SAM file.  Cytosine methylation is a key component in epigenetic regulation of gene expression.  " +
             "Bisulfite sequencing is a technique used to analyze the genome-wide methylation profiles on a single" +
@@ -80,9 +80,9 @@ public class CollectRrbsMetrics extends CommandLineProgram {
             "<h4>Usage example:</h4>" +
             "<pre>" +
             "   java -jar picard.jar CollectRrbsMetrics" +
-            "        -I=/Users/MyUName/MyBAM.bam" +
-            "        -M=/Users/MyUName/rrbsmetrics" +
-            "        -R=/Users/MyUName/human_b37_20.fasta" +
+            "        -I=insert.bam" +
+            "        -M=Metrics.rrbsmetrics" +
+            "        -R=reference.fasta" +
             "</pre>" +
             "<hr />" +
             "" +
