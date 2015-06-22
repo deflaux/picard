@@ -79,9 +79,8 @@ public class CollectInsertSizeMetrics extends SinglePassSamProgram {
             "http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics" +
             "" +
             "<br /><br />* Fullwood MJ, Wei CL, Liu ET, Ruan Y. 2009. Next-Generation DNA sequencing of paired-end tags " +
-            "(PET) for transcriptome and genome analyses. Genome Research. 19:521–532. PMID 19339662." +
-            "<hr />"
-    ;
+            "(PET) for transcriptome and genome analyses. Genome Research. 19:521-532. PMID 19339662." +
+            "<hr />";
 
     private static final Log log = Log.getInstance(CollectInsertSizeMetrics.class);
     private static final String Histogram_R_SCRIPT = "picard/analysis/insertSizeHistogram.R";
