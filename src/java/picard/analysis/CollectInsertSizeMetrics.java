@@ -69,11 +69,11 @@ public class CollectInsertSizeMetrics extends SinglePassSamProgram {
             " as well as a histogram plot. <br />" +
             "" +
             "<h4>Usage example:</h4>" +
-            "java -jar picard.jar CollectInsertSizeMetrics \\<br />" +
-            "     -I=/input.bam \\<br />" +
-            "     -O=/output.insert_size_metrics \\<br />" +
-            "     -H=/insert_size_histogram.pdf \\<br />" +
-            "     -M=0.5" +
+            "  java -jar picard.jar CollectInsertSizeMetrics \\<br />" +
+            "       -I=/input.bam \\<br />" +
+            "       -O=/output.insert_size_metrics \\<br />" +
+            "       -H=/insert_size_histogram.pdf \\<br />" +
+            "       -M=0.5" +
             "" +
             "<br /><br />For additional information, see " +
             "http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics" +
