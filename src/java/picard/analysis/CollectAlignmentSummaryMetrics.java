@@ -72,7 +72,7 @@ public class CollectAlignmentSummaryMetrics extends SinglePassSamProgram {
     static final String USAGE_SUMMARY = "<h4>Brief:</h4>Produces a file containing summary alignment metrics from " +
             "a SAM or BAM file.<br />";
     static final String USAGE_DETAILS = "<br />" +
-            "<h4>Details-</h4>  Using read outputs from NGS technologies, this tool provides detailed metrics" +
+            "<h4>Summary:</h4>  Using read outputs from NGS technologies, this tool provides detailed metrics" +
             "regarding the quality of the alignments of these reads to a reference sequence. These metrics include " +
             "the numbers of" +
             "reads that passed machine signal-to-noise threshold quality filters as well as values representing the" +
@@ -84,7 +84,7 @@ public class CollectAlignmentSummaryMetrics extends SinglePassSamProgram {
             "system_documentation/hiseqx/hiseq-x-system-guide-15050091-d.pdf)." +
             "" +
             "<br />" +
-            "<h4>Usage example-</h4>" +
+            "<h4>Usage example:</h4>" +
             "<pre>" +
             "    java -jar picard.jar CollectAlignmentMetrics \\<br />" +
             "        R=reference.fasta \\<br />" +
