@@ -48,13 +48,37 @@ import java.util.Set;
  * @author Doug Voet (dvoet at broadinstitute dot org)
  */
 @CommandLineProgramProperties(
-        usage = "Reads a SAM or BAM file and writes a file containing metrics about " +
-                "the statistical distribution of insert size (excluding duplicates) " +
-                "and generates a Histogram plot.",
-        usageShort = "Writes insert size distribution metrics for a SAM or BAM file",
+        usage = CollectInsertSizeMetrics.USAGE_BRIEF + CollectInsertSizeMetrics.USAGE_SUMMARY,
+        usageShort =CollectInsertSizeMetrics.USAGE_BRIEF,
         programGroup = Metrics.class
 )
+
 public class CollectInsertSizeMetrics extends SinglePassSamProgram {
+    static final String USAGE_BRIEF = "<h4>Brief:</h4>Metrics about the insert size distribution of a paired-end librar<br />";
+    static final String USAGE_SUMMARY = "<br /><h4>Summary:</h4> InsertSizeMetrics - Metrics about the insert size" +
+            " distribution of a paired-end library, created by the CollectInsertSizeMetrics program and usually" +
+            " written to a file with the extension '.insert_size_metrics'. In addition, the insert size distribution" +
+            " <br />  Reads a SAM or BAM file and writes a file containing metrics about the statistical " +
+            "distribution of insert size (excluding duplicates) for paired-end tagged sequencing runs*.  " +
+            "The inserts correspond to the sequence between two facing read pairs, usually 300 - 500 bases, " +
+            "but can be varied " +
+            "(http://www.illumina.com/technology/next-generation-sequencing/paired-end-sequencing_assay.html). " +
+            "Generates tabular outputs as well as a histogram plot. <br />" +
+            "" +
+            "For additional information, see " +
+            "http://broadinstitute.github.io/picard/picard-metric-definitions.html#InsertSizeMetrics" +
+            "" +
+            "<h4>Usage example:</h4>" +
+            "java -jar picard.jar CollectInsertSizeMetrics \\<br />" +
+            "     -I=/input.bam \\<br />" +
+            "     -O=/output.insert_size_metrics \\<br />" +
+            "     -H=/insert_size_histogram.pdf \\<br />" +
+            "     -M=0.5" +
+            "<br /><h4>* Fullwood MJ, Wei CL, Liu ET, Ruan Y. 2009. Next-Generation DNA sequencing of paired-end tags " +
+            "(PET) for transcriptome and genome analyses. Genome Research. 19:521–532. PMID 19339662." +
+            "<hr />"
+    ;
+
     private static final Log log = Log.getInstance(CollectInsertSizeMetrics.class);
     private static final String Histogram_R_SCRIPT = "picard/analysis/insertSizeHistogram.R";
 
