@@ -69,7 +69,7 @@ import java.util.Set;
         programGroup = Metrics.class
 )
 public class CollectAlignmentSummaryMetrics extends SinglePassSamProgram {
-    static final String USAGE_SUMMARY = "<h4>Summary-</h4>  Produces a file containing summary alignment metrics from " +
+    static final String USAGE_SUMMARY = "<h4>Brief:</h4>Produces a file containing summary alignment metrics from " +
             "a SAM or BAM file.<br />";
     static final String USAGE_DETAILS = "<br />" +
             "<h4>Details-</h4>  Using read outputs from NGS technologies, this tool provides detailed metrics" +
