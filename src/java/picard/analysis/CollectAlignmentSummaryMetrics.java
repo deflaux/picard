@@ -64,14 +64,14 @@ import java.util.Set;
  * @author Doug Voet (dvoet at broadinstitute dot org)
  */
 @CommandLineProgramProperties(
-        usage = CollectAlignmentSummaryMetrics.USAGE_SUMMARY + CollectAlignmentSummaryMetrics.USAGE_DETAILS,
-        usageShort = CollectAlignmentSummaryMetrics.USAGE_SUMMARY,
+        usage = CollectAlignmentSummaryMetrics.USAGE_BRIEF + CollectAlignmentSummaryMetrics.USAGE_SUMMARY,
+        usageShort = CollectAlignmentSummaryMetrics.USAGE_BRIEF,
         programGroup = Metrics.class
 )
 public class CollectAlignmentSummaryMetrics extends SinglePassSamProgram {
-    static final String USAGE_SUMMARY = "<h4>Brief:</h4>Produces a file containing summary alignment metrics from " +
+    static final String USAGE_BRIEF = "<h4>Brief:</h4>Produces a file containing summary alignment metrics from " +
             "a SAM or BAM file.<br />";
-    static final String USAGE_DETAILS = "<br />" +
+    static final String USAGE_SUMMARY = "<br />" +
             "<h4>Summary:</h4>  Using read outputs from NGS technologies, this tool provides detailed metrics" +
             "regarding the quality of the alignments of these reads to a reference sequence. These metrics include " +
             "the numbers of" +
