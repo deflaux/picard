@@ -23,7 +23,6 @@ public class GenotypeConcordanceSummaryMetrics extends MetricBase {
 
         final GenotypeConcordanceSchemeFactory schemeFactory = new GenotypeConcordanceSchemeFactory();
         final GenotypeConcordanceScheme scheme = schemeFactory.getScheme(missingSitesFlag);
-        scheme.initiateScheme();
         scheme.validateScheme();
         concordanceCounts.validateCountsAgainstScheme(scheme);
 
