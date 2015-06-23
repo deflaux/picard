@@ -25,10 +25,10 @@ import java.util.Set;
                 "BAM file.  If a reference sequence is provided, AT/GC dropout metrics will be calculated, " +
                 "and the PER_TARGET_COVERAGE option can be used to output GC and mean coverage information " +
                 "for every target.  The AT/GC dropout metrics indicate the degree of inadequate coverage of a " +
-                "particular region based on it’s AT or GC content." +
+                "particular region based on it's AT or GC content." +
                 "" +
                 "<h4>Usage Example</h4>" +
-                "<pre> " +
+                "<pre>" +
                 "   java -jar picard.jar CollectTargetedPcrMetrics \\<br /> " +
                 "        -I=input.bam \\<br />" +
                 "        -O=PCRMetrics.bam \\<br />" +
