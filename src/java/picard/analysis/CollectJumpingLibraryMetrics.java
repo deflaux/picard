@@ -71,8 +71,8 @@ public class CollectJumpingLibraryMetrics extends CommandLineProgram {
             "are considered proximal (non-jumping).  It is often desirable to remove chimeric inserts which can " +
             "complicate downstream analyses.  <br />" +
             "This program gets all data for computation from the first read in each pair and assumes that the mapping" +
-            " quality (MQ) tag is set with the mate's mapping quality.  If the MQ tag is not set, then the program" +
-            " assumes that the mate's MQ is greater than or equal to MINIMUM_MAPPING_QUALITY (default value is 0)." +
+            "quality (MQ) tag is set with the mate's mapping quality.  If the MQ tag is not set, then the program" +
+            "assumes that the mate's MQ is greater than or equal to MINIMUM_MAPPING_QUALITY (default value is 0)." +
             "<br />"  +
             "<h4>Usage example:</h4>" +
             "<pre>" +
