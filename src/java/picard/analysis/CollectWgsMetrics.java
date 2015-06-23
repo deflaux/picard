@@ -42,13 +42,11 @@ import java.util.List;
 
         "<h4>Usage Example:</h4>" +
                 "<pre>"  +
-                "<code>" +
                 "java -jar picard.jar CollectWgsMetrics \\<br /> " +
                 "     -I=Input.bam \\<br /> "+
                 "     -O=Outputmetrics.txt \\<br />" +
                 "     -R=ReferenceSequence.fasta" +
-                "</code>" +
-        "</pre>" +
+                "</pre>" +
         "For detailed explanations of the output metrics, please see: " +
         "http://broadinstitute.github.io/picard/picard-metric-definitions.html#CollectWgsMetrics.WgsMetrics" +
         "<hr />"
