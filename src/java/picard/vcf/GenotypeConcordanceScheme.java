@@ -38,13 +38,6 @@ public abstract class GenotypeConcordanceScheme{
     /** Has this scheme been previously validated */
     private boolean isValidated = false;
 
-    /** Initiates the scheme by adding rows to it with calls based on the scheme design
-     *  Current schemes include
-     *  GA4GHScheme
-     *  GA4GHSchemeWithMissingAsNoCall
-     *  */
-    public abstract void initiateScheme();
-
     /**
      * Adds a row to the scheme
      * @param callState the call state (row)

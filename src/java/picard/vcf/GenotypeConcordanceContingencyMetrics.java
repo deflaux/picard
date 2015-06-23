@@ -22,10 +22,8 @@ public class GenotypeConcordanceContingencyMetrics extends MetricBase {
         this.TRUTH_SAMPLE = truthSample;
         this.CALL_SAMPLE = callSample;
 
-//        final GenotypeConcordanceScheme scheme = new GenotypeConcordanceScheme();
         final GenotypeConcordanceSchemeFactory schemeFactory = new GenotypeConcordanceSchemeFactory();
         final GenotypeConcordanceScheme scheme = schemeFactory.getScheme(missingSitesFlag);
-        scheme.initiateScheme();
         scheme.validateScheme();
         concordanceCounts.validateCountsAgainstScheme(scheme);
 

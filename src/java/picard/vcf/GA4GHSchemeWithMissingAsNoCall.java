@@ -23,7 +23,17 @@ import picard.vcf.GenotypeConcordanceStates.*;
  */
 
 public class GA4GHSchemeWithMissingAsNoCall extends GenotypeConcordanceScheme{
-    public void initiateScheme(){
+
+    public GA4GHSchemeWithMissingAsNoCall() {
+        /** Initiates the scheme by adding rows to it with calls based on the scheme design
+         *  Current schemes include
+         *  GA4GHScheme
+         *  GA4GHSchemeWithMissingAsNoCall
+         *  */
+        initiateScheme();
+    }
+
+    public void initiateScheme() {
         /**          ROW STATE            MISSING       HOM_REF       HET_REF_VAR1       HET_VAR1_VAR2        HOM_VAR1        NO_CALL        LOW_GQ        LOW_DP        VC_FILTERED   GT_FILTERED   IS_MIXED    **/
         addRow(CallState.MISSING,         TN_ONLY,      TN_ONLY,      TN_FN,             FN_ONLY,             FN_ONLY,        EMPTY,         EMPTY,        EMPTY,        EMPTY,        EMPTY,        EMPTY);
         addRow(CallState.HOM_REF,         EMPTY,        TN_ONLY,      TN_FN,             FN_ONLY,             FN_ONLY,        EMPTY,         EMPTY,        EMPTY,        EMPTY,        EMPTY,        EMPTY);

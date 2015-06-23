@@ -104,7 +104,7 @@ public class GenotypeConcordance extends CommandLineProgram {
     @Option(doc="If true, use the VCF index, else iterate over the entire VCF.", optional = true)
     public boolean USE_VCF_INDEX = false;
 
-    @Option(shortName = "MISSING_HOM", doc="If true, missing sites in the truth set will be treated as hom ref sites. Useful when hom ref sites are left out of the truth set.")
+    @Option(shortName = "MISSING_HOM", doc="Default is false, which follows the GA4GH Scheme. If true, missing sites in the truth set will be treated as no call sites and missing-missing will be true negatives. Useful when hom ref sites are left out of the truth set.")
     public boolean MISSING_SITES_HOM_REF = false;
 
     private final Log log = Log.getInstance(GenotypeConcordance.class);
@@ -317,7 +317,6 @@ public class GenotypeConcordance extends CommandLineProgram {
                                          final GenotypeConcordanceCounts counter, final String truthSampleName, final String callSampleName) {
         final GenotypeConcordanceSchemeFactory schemeFactory = new GenotypeConcordanceSchemeFactory();
         final GenotypeConcordanceScheme scheme = schemeFactory.getScheme(MISSING_SITES_HOM_REF);
-        scheme.initiateScheme();
         scheme.validateScheme();
         for (final TruthState truthState : TruthState.values()) {
             for (final CallState callState : CallState.values()) {
