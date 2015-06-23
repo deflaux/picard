@@ -61,7 +61,7 @@ public class CollectInsertSizeMetrics extends SinglePassSamProgram {
             "sequences and structural rearrangements that confound alignment programs.  For additional" +
             "information about paired-end tags, see " +
             "(http://www.illumina.com/technology/next-generation-sequencing/paired-end-sequencing_assay.html).<br />" +
-            "" +
+            "<br /><br />" +
             "The metrics created by the CollectInsertSizeMetrics program are usually written to a file with the" +
             " extension '.insert_size_metrics'." +
             "<br />  This file contains metrics about the statistical distribution of insert sizes " +
