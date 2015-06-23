@@ -20,7 +20,7 @@ import java.util.Set;
         usage = "TruSeq Custom Amplicon (TSCA) is an Illumina kit that allows researchers to sequence targeted " +
                 "regions of interest of a genome.  Although, there are many applications for using this targeted " +
                 "approach, it is frequently used for genomic regions of high or low GC. (http://www.illumina.com/content/dam/illumina-marketing/documents/products/datasheets/datasheet_truseq_custom_amplicon.pdf)." +
-                "<br />" +
+                "<br /><br />" +
                 "CollectTargetedPcrMetrics calculates a set of metrics to TSCA sequencing from an aligned SAM or " +
                 "BAM file.  If a reference sequence is provided, AT/GC dropout metrics will be calculated, " +
                 "and the PER_TARGET_COVERAGE option can be used to output GC and mean coverage information " +
