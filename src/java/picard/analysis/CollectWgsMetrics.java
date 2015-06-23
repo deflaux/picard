@@ -39,14 +39,12 @@ import java.util.List;
                 " distributions within a genome.  Tool outputs raw values between 0 - 250X coverage as well as binning" +
                 " the outputs from 5X - 100X coverage in increments of 5 or 10%.  Both mapping quality and base quality" +
                 " filters are adjustable, with both default values set at 20." +
-        "<br /><br />" +
-        " CollectWgsMetrics " +
-        "" +
+
         "<h4>Usage Example</h4>" +
         "<pre>" +
-                "java -jar picard.jar CollectWgsMetrics" +
-                "-I=Input.bam" +
-                "-O=Outputmetrics.txt" +
+                "java -jar picard.jar CollectWgsMetrics \\<br /> " +
+                "-I=Input.bam \\<br /> "+
+                "-O=Outputmetrics.txt \\<br />" +
                 "-R=ReferenceSequence.fasta" +
                 "</pre>" +
         "For detailed explanations of the output metrics, please see: " +
