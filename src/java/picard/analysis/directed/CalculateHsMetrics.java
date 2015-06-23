@@ -50,15 +50,16 @@ import java.util.TreeSet;
         usage = "Calculates a set of Hybrid Selection-specific metrics from an aligned SAM or BAM file. If a reference " +
                 "sequence is provided, AT/GC dropout metrics will be calculated, and the PER_TARGET_COVERAGE option can" +
                 " be used to output GC and mean coverage information for every target." +
-                "<br /> " +
+                "<br /><br />" +
                 "Hybrid selection (HS) enables targeted sequencing analysis via the capture of specified genomic DNA" +
-                " sequences e.g. exons, from samples of interest e.g. clinical sample (doi:10.1038/nbt.1523). " +
+                "sequences e.g. exons, from samples of interest e.g. clinical sample (doi:10.1038/nbt.1523). " +
                 "Synthetically produced RNAs encoding unique sequences from genes of interest (baits) are used to " +
                 "capture genomic DNA from a sample of interest via solution hybridization. Targets captured by these " +
                 "baits are amplified and sequenced to identify unique variants in specific genomic regions of the " +
                 "sample of interest.  Sequences are aligned to the reference for analysis and the alignment " +
                 "efficacies are characterized and output. Bait intervals are the sequences used for baits and " +
                 "target intervals are the sequences of interest in the sample genomic DNA. " +
+                "<h4>Usage Example:</h4>"+
                 "<pre>" +
                 "java -jar picard.jar CalculateHsMetrics \\<br />" +
                 "     -I=Input.bam \\<br />" +
