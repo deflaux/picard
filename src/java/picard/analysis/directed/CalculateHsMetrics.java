@@ -67,7 +67,9 @@ import java.util.TreeSet;
                 "     -R=ReferenceSequence.fasta \\<br />" +
                 "     -BAIT_INTERVALS=Baitintervallist.vcf \\<br />" +
                 "     -TARGET_INTERVALS=Targetintervallist.vcf" +
-                "</pre> ",
+                "</pre> "   +
+        "<hr />"
+        ,
         usageShort = "Calculates a set of Hybrid Selection-specific metrics from an aligned SAM or BAM file ",
         programGroup = Metrics.class
 )
