@@ -41,12 +41,14 @@ import java.util.List;
                 " filters are adjustable, with both default values set at 20." +
 
         "<h4>Usage Example:</h4>" +
-                "<pre>" +
+                "<pre>"  +
+                "<code>" +
                 "java -jar picard.jar CollectWgsMetrics \\<br /> " +
                 "     -I=Input.bam \\<br /> "+
                 "     -O=Outputmetrics.txt \\<br />" +
                 "     -R=ReferenceSequence.fasta" +
-                "</pre>" +
+                "</code>" +
+        "</pre>" +
         "For detailed explanations of the output metrics, please see: " +
         "http://broadinstitute.github.io/picard/picard-metric-definitions.html#CollectWgsMetrics.WgsMetrics" +
         "<hr />"
