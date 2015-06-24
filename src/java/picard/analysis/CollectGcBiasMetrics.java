@@ -73,11 +73,11 @@ import java.util.Set;
                 "is output and plotted."+
                 "<h4>Usage Example:</h4>"+
                 "<pre>" +
-                "java -jar picard.jar CollectGcBiasMetrics \\<br />" +
-                "     -I=Input.bam \\<br />" +
-                "     -O=GCBiasMetrics.txt \\<br />" +
-                "     -CHART=GCBiasMetrics.pdf \\<br />" +
-                "     -R=ReferenceSequence.fasta" +
+                "java -jar picard.jar CollectGcBiasMetrics \\<br />"+
+                "     -I=Input.bam \\<br />"+
+                "     -O=GCBiasMetrics.txt \\<br />"+
+                "     -CHART=GCBiasMetrics.pdf \\<br />"+
+                "     -R=ReferenceSequence.fasta"+
                 "</pre>" +
                 "For detailed explanations of the output metrics, please see:" +
                 "https://broadinstitute.github.io/picard/picard-metric-definitions.html#GcBiasMetrics" +
